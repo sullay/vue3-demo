@@ -1,18 +1,19 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
+    <button @click="click">button</button>
   </div>
 </template>
 
 <script>
-import { useStore } from 'vuex'
+import { message } from '../components/message/index'
 export default {
   name: 'Home',
   setup () {
-    const store = useStore()
-    store.dispatch('getArticleListAll', {}).then(res => {
-      console.log(res)
-    })
+    function click () {
+      message({ text: '11111111111111111111111', type: 'danger' })
+    }
+    return { click }
   }
 }
 </script>
