@@ -16,3 +16,10 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+button{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+</style>
